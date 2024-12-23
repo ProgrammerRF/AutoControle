@@ -1,4 +1,4 @@
-﻿from kivy.app import App
+from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.button import Button
@@ -33,7 +33,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:1985
+            height:1580
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -42,7 +42,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:80
             Label:
                 text:'Auto-Controle'
                 size_hint_y:None
@@ -52,7 +52,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:200
+                height:80
             Image:
                 source:r'C:\\Users\\us\\Downloads\\atenção.png'
                 size_hint_y:None
@@ -60,7 +60,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:70
             Button:
                 text:'Registro'
                 size_hint_y:None
@@ -72,7 +72,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:50
             Button:
                 text:'Bloquear: App'
                 size_hint_y:None
@@ -82,17 +82,8 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
-            Button:
-                text:'Bloquear: Sites'
-                size_hint_y:None
-                height:80
-                background_color:0,1,0,1
-                on_press:root.manager.current = 'bloqueiodesite'
-            Label:
-                text:''
-                size_hint_y:None
                 height:200
+            
 
 
 
@@ -104,7 +95,7 @@ Gui = Builder.load_string("""
 <Registrar>:
     ScrollView:
         size_hint: 1, None  # Ajusta a largura para ocupar a tela toda e a altura pode ser controlada
-        height: 630  # Isso pode ser alterado de acordo com a necessidade
+        height: 850  # Isso pode ser alterado de acordo com a necessidade
         BoxLayout:
             orientation: 'vertical'
             size_hint_y: None
@@ -122,22 +113,25 @@ Gui = Builder.load_string("""
                 text: 'Auto-Controle'
                 size_hint_y: None
                 height: 100
-                font_size: 40
+                font_size: 30
                 color: 0, 1, 0, 1
             Label:
                 text: ''
                 size_hint_y: None
-                height: 200
+                height: 100
             Label:
                 text: "Você superou este dia? "
                 size_hint_y: None
                 height: 100
+                font_size:20
             Label:
                 text: ''
                 size_hint_y: None
                 height: 100
             BoxLayout:
                 orientation: 'horizontal'
+                size_hint_y:None
+                height:100
                 size_hint_x: None
                 width: 100
                 Label:
@@ -147,7 +141,7 @@ Gui = Builder.load_string("""
                 Button:
                     text: 'Sim'
                     size_hint_y: None
-                    height: 100
+                    height: 80
                     size_hint_x: None
                     width: 100
                     background_color: 0, 1, 0, 1
@@ -159,7 +153,7 @@ Gui = Builder.load_string("""
                 Button:
                     text: 'Não'
                     size_hint_y: None
-                    height: 100
+                    height: 80
                     size_hint_x: None
                     width: 100
                     background_color: 3, 0, 1, 2
@@ -176,7 +170,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:1250
+            height:1335
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -190,8 +184,12 @@ Gui = Builder.load_string("""
                 text:'Dia Registrado Com Sucesso'
                 size_hint_y:None
                 height:100
-                font_size:40
+                font_size:30
                 color:0,1,0,1
+            Label:
+                text:''
+                size_hint_y:None
+                height:100
 
 
 
@@ -202,7 +200,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:1250
+            height:1335
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -216,9 +214,12 @@ Gui = Builder.load_string("""
                 text:'Você ainda não superou nenhum dia!'
                 size_hint_y:None
                 height:100
-                font_size:40
+                font_size:30
                 color:0,1,0,1
-
+            Label:
+                text:''
+                size_hint_y:None
+                height:100
 
 <Dia_Eliminado>:
     ScrollView:
@@ -227,7 +228,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:1250
+            height:1335
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -241,8 +242,12 @@ Gui = Builder.load_string("""
                 text:'Dia Eliminado Com Sucesso'
                 size_hint_y:None
                 height:100
-                font_size:40
+                font_size:30
                 color:0,1,0,1
+            Label:
+                text:''
+                size_hint_y:None
+                height:100
 
 
 <Alerta>:
@@ -252,7 +257,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:1250
+            height:1335
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -266,8 +271,12 @@ Gui = Builder.load_string("""
                 text:'Você já registrou esse dia!'
                 size_hint_y:None
                 height:100
-                font_size:40
+                font_size:30
                 color:0,1,0,1
+            Label:
+                text:''
+                size_hint_y:None
+                height:100
 
 
 <Historico>:
@@ -277,7 +286,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:2750
+            height:2240
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -291,16 +300,12 @@ Gui = Builder.load_string("""
                 text:'HISTORICO'
                 size_hint_y:None
                 height:100
-                font_size:40
+                font_size:25
                 color:0,1,0,1
             Label:
                 text:''
                 size_hint_y:None
                 height:100
-            Label:
-                text:''
-                size_hint_y:None
-                height:400
             ScrollView:
                 size_hint_y:None
                 height:800
@@ -312,7 +317,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:200
+                height:100
             Label:
                 id:total
                 text:''
@@ -332,7 +337,7 @@ Gui = Builder.load_string("""
             id:box
             orientation:'vertical'
             size_hint_y:None
-            height:2350
+            height:2040
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -341,24 +346,24 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:200
+                height:100
             Label:
                 text:'Blocklist'
                 size_hint_y:None
                 height:100
-                font_size:40
+                font_size:30
                 color:0,1,0,1
             Label:
                 text:''
                 size_hint_y:None
-                height:300
+                height:100
             ScrollView:
                 size_hint_y:None
                 height:1000
                 BoxLayout:
                     orientation:'vertical'
                     size_hint_y:None
-                    height:4000
+                    height:2500
                     Label:
                         id:programa
                         text:''
@@ -373,7 +378,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:1500
+            height:1320
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -382,12 +387,12 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:200
+                height:100
             Label:
                 text:'Lista De Bloqueio'
                 size_hint_y:None
                 height:100
-                font_size:40
+                font_size:30
                 color:0,1,0,1
             Label:
                 text:''
@@ -408,7 +413,8 @@ Gui = Builder.load_string("""
             Button:
                 text:'Adicionar'
                 size_hint_y:None
-                height:100
+                height:80
+                background_color:0,1,0,1
                 on_press:root.adicionar()
 
 
@@ -419,7 +425,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:1550
+            height:1320
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -428,12 +434,12 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:200
+                height:100
             Label:
                 text:'Alterar Lista De Bloqueio'
                 size_hint_y:None
                 height:100
-                font_size:40
+                font_size:30
                 color:0,1,0,1
             Label:
                 text:''
@@ -454,8 +460,9 @@ Gui = Builder.load_string("""
             Button:
                 text:'Remover'
                 size_hint_y:None
-                height:100
+                height:80
                 on_press:root.remover()
+                background_color:0,1,0,1
 
 
 <Bloquear_Site>:
@@ -479,7 +486,7 @@ Gui = Builder.load_string("""
                 text:'Lista De Bloqueio'
                 size_hint_y:None
                 height:100
-                font_size:40
+                font_size:30
                 color:0,1,0,1
             Label:
                 text:''
@@ -555,7 +562,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:1940
+            height:1640
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -564,7 +571,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:80
             Label:
                 text:'Registros'
                 size_hint_y:None
@@ -574,7 +581,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:200
+                height:100
             Image:
                 source:r'C:\\Users\\us\\Downloads\\atenção.png'
                 size_hint_y:None
@@ -582,7 +589,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:150
+                height:80
             Button:
                 text:'Registrar Dia'
                 size_hint_y:None
@@ -592,7 +599,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:50
             Button:
                 text:'Historico'
                 size_hint_y:None
@@ -602,12 +609,13 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:50
             Button:
                 text:'Recorde'
                 size_hint_y:None
                 height:80
                 background_color:0,1,0,1
+                on_press:root.manager.current = 'recorde'
             Label:
                 text:''
                 size_hint_y:None
@@ -620,7 +628,7 @@ Gui = Builder.load_string("""
         BoxLayout:
             orientation:'vertical'
             size_hint_y:None
-            height:1880
+            height:1635
             ActionBar:
                 ActionView:
                     ActionPrevious:
@@ -629,7 +637,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:80
             Label:
                 text:'Bloquear App'
                 size_hint_y:None
@@ -639,7 +647,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:200
+                height:100
             Image:
                 source:r'C:\\Users\\us\\Downloads\\atenção.png'
                 size_hint_y:None
@@ -647,7 +655,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:80
             Button:
                 text:'Lista De Bloqueio'
                 size_hint_y:None
@@ -657,7 +665,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:50
             Button:
                 text:'Bloquear Programas'
                 size_hint_y:None
@@ -667,7 +675,7 @@ Gui = Builder.load_string("""
             Label:
                 text:''
                 size_hint_y:None
-                height:100
+                height:50
             Button:
                 text:'Alterar Lista de bloqueio: Programas'
                 size_hint_y:None
@@ -744,6 +752,55 @@ Gui = Builder.load_string("""
                 size_hint_y:None
                 height:200
 
+
+<Recorde>:
+    ScrollView:
+        size_hint_y:None
+        height:1390
+        BoxLayout:
+            orientation:'vertical'
+            size_hint_y:None
+            height:2135
+            ActionBar:
+                ActionView:
+                    ActionPrevious:
+                        title:'Voltar'
+                        on_press:root.manager.current = 'registro'
+            Label:
+                text:''
+                size_hint_y:None
+                height:100
+            Label:
+                text:'RECORDE'
+                size_hint_y:None
+                height:100
+                font_size:30
+                color:0,1,0,1
+            Label:
+                text:''
+                size_hint_y:None
+                height:100
+            ScrollView:
+                size_hint_y:None
+                height:800
+                Label:
+                    id:diasregistrados                
+                    text:''
+                    size_hint_y:None
+                    height:1000
+            Label:
+                text:''
+                size_hint_y:None
+                height:100
+            Label:
+                id:total
+                text:''
+                size_hint_y:None
+                height:100
+            Label:
+                text:''
+                size_hint_y:None
+                height:100
 
 """)
 
@@ -846,10 +903,10 @@ class Menu(Screen):
 
     def sair(self):
         pop1 = BoxLayout(orientation='horizontal')
-        sim = Button(text='Sim', size_hint_y=None, height=100)
+        sim = Button(text='Sim', size_hint_y=None, height=80)
         sim.bind(on_press=self.encerrar)
         espaço = Label(text='', size_hint_x=None, width=40)
-        não = Button(text='Não', size_hint_y=None, height=100)
+        não = Button(text='Não', size_hint_y=None, height=80)
         não.bind(on_press=self.desaparecer)
 
         pop1.add_widget(sim)
@@ -857,7 +914,7 @@ class Menu(Screen):
         pop1.add_widget(não)
 
         self.pop = Popup(title='Você realmente quer Sair?',
-                         content=pop1, size_hint_y=None, height=300)
+                         content=pop1, size_hint_y=None, height=200,size_hint_x=None,width=400)
         self.pop.open()
 
     def encerrar(self, instance):
@@ -917,8 +974,21 @@ class Registrar(Screen):
             file.write('')
             file.close()
 
-            self.manager.current = 'diaeliminado'
+            os.chdir(r'C:\Users\us\PycharmProjects\pythonProject\Autocontrole\Recorde')
 
+            file = open('contador', 'r')
+            recorde = file.read()
+            file.close()
+
+            if texto.count('Data') > recorde.count('Data'):
+                file = open('contador', 'w')
+                file.write(texto)
+                file.close()
+            else:
+                pass
+
+            self.manager.current = 'diaeliminado'
+            print(texto, recorde)
 
 class Dia_Registrado(Screen):
     def __init__(self, texto='', **kwargs):
@@ -963,6 +1033,23 @@ class Blocklist(Screen):
 class Recorde(Screen):
     def __init__(self, texto='', **kwargs):
         super().__init__(**kwargs)
+
+    def on_pre_enter(self):
+        os.chdir(r'C:\Users\us\PycharmProjects\pythonProject\Autocontrole\Recorde')
+
+        file = open('contador', 'r')
+        texto = file.read()
+        file.close()
+
+        dias = texto.count('Data')
+
+        self.ids.diasregistrados.text = texto
+
+        self.ids.total.text = """
+
+Dias superados: {}        
+
+""".format(str(dias))
 
 
 class Bloqueio(Screen):
