@@ -83,7 +83,7 @@ Gui = Builder.load_string("""
                 text:''
                 size_hint_y:None
                 height:200
-            
+
 
 
 
@@ -857,7 +857,7 @@ class Menu(Screen):
                 file.write(texto.replace(lista[teste], ''))
                 file.close()
 
-                for contador in range(1, len(lista2)):
+                for contador in range(0, len(lista2)):
                     file = open(lista2[contador], 'r')
                     leitor = file.read()
                     file.close()
@@ -914,7 +914,7 @@ class Menu(Screen):
         pop1.add_widget(não)
 
         self.pop = Popup(title='Você realmente quer Sair?',
-                         content=pop1, size_hint_y=None, height=200,size_hint_x=None,width=400)
+                         content=pop1, size_hint_y=None, height=200, size_hint_x=None, width=400)
         self.pop.open()
 
     def encerrar(self, instance):
@@ -989,6 +989,7 @@ class Registrar(Screen):
 
             self.manager.current = 'diaeliminado'
             print(texto, recorde)
+
 
 class Dia_Registrado(Screen):
     def __init__(self, texto='', **kwargs):
